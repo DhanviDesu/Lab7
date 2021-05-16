@@ -42,9 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let newPost = document.createElement('journal-entry');
                 newPost.entry = entry;
                 newPost.id = ++id;
+
                 newPost.onclick = () => {
                     setState({ name: "entry", id: newPost.id }, false);
                 };
+
                 document.querySelector('main').appendChild(newPost);
             });
         });
