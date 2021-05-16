@@ -41,10 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 let newPost = document.createElement('journal-entry');
                 newPost.entry = entry;
-                ++id;
-                newPost.id = id;
+                newPost.id = ++id;
                 newPost.onclick = () => {
-                    setState({ name: "entry", id: newPost.id }, entry);
+                    setState({ name: "entry", id: newPost.id }, false);
                 };
                 document.querySelector('main').appendChild(newPost);
             });
